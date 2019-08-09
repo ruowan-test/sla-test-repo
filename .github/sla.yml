@@ -1,5 +1,6 @@
 --- 
-- initial-reponse:
+- scheduleTask:
+    name: "no-initial-response"
     description: "None initial response in 24hours"
     interval: 12h 
     condition: master #or close
@@ -9,7 +10,8 @@
         limit: 24h
         message: Initial response time 
     
-- nono-update-pr:
+- scheduleTask:
+    name: "no-update-in-5d"
     description: "None update in PR in 5 days"
     interval: 1h
     condition: all

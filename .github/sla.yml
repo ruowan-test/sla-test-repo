@@ -1,0 +1,19 @@
+--- 
+- initial-reponse:
+    description: "None initial response in 24hours"
+    interval: 12h 
+    condition: master #or close
+    action: sendEmailToAssignee
+    # `args` will be passed into action function defined in sla-bot.  
+    args:
+        limit: 24h
+        message: Initial response time 
+    
+- nono-update-pr:
+    description: "None update in PR in 5 days"
+    interval: 1h
+    condition: all
+    action: sendEmailToAssignee
+    args:
+        limit: 5d
+        message: This PR have no update in five days

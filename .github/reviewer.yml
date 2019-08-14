@@ -1,0 +1,12 @@
+--- 
+- groupA:
+    - githubID: userA
+      email: userA@microsoft.com
+    - githubID : someone
+      email: someone@microsoft.com
+    - githubID: ruowan
+      email: ruowan@microsoft.com
+      
+- groupB:
+    - githubID: xxx
+      email: xxx@microsoft.com

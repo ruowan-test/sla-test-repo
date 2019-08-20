@@ -1,21 +1,19 @@
 --- 
 - scheduleTask:
     name: "no-initial-response"
-    description: "None initial response in 24hours"
-    interval: 12h 
-    condition: master #or close
+    description: "None initial response in 24 hours"
+    branchWhitelist: ["master"]
     action: sendEmailToAssignee
-    # `args` will be passed into action function defined in sla-bot.  
     args:
         limit: 24h
-        message: Initial response time 
+        subject: "[Reminder] Please make a initial response to the PR"
+        message: The PR has no initial response in the last 24h. Please respond to the PR to update status.
     
 - scheduleTask:
     name: "no-update-in-5d"
     description: "None update in PR in 5 days"
-    interval: 1h
-    condition: all
     action: sendEmailToAssignee
     args:
         limit: 5d
-        message: This PR have no update in five days
+        subject: "[Action] Please respond to the PR" 
+        message: The PR has no update in the last 5 days. Please respond to the PR to update status.

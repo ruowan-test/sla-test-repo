@@ -6,7 +6,7 @@
     action: sendEmailToAssignee
     args:
         limit: 24h
-        subject: "[Reminder] Please "
+        subject: "[Reminder] Please make a initial response to the PR"
         message: The PR has no initial response in the last 24h. Please respond to the PR to update status.
     
 - scheduleTask:
@@ -15,5 +15,5 @@
     action: sendEmailToAssignee
     args:
         limit: 5d
-        subject: "[Action] Please respond to the PR." 
+        subject: "[Action] Please respond to the PR" 
         message: The PR has no update in the last 5 days. Please respond to the PR to update status.

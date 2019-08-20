@@ -14,6 +14,6 @@
     description: "None update in PR in 5 days"
     action: sendEmailToAssignee
     args:
-        limit: 5d
+        limit: 10s
         subject: "[Action] Please respond to the PR" 
         message: The PR has no update in the last 5 days. Please respond to the PR to update status.

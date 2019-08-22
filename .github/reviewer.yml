@@ -8,6 +8,8 @@
           email: someone@microsoft.com
         - githubID: ruowan
           email: ruowan@microsoft.com
+        - githubID: raych1
+          email: raychen@microsoft.com
       
 - group:
     name: teamB

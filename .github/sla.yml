@@ -1,5 +1,16 @@
 ---
 - scheduleTask:
+      name: "test schedule task"
+      description: "only for test"
+      branchWhitelist: ["master"]
+      action: sendEmailToAssignee
+      args:
+          ignoredLabels: ["WaitForAuthor", "DonNotMerge"]
+          limit: 30s
+          subject: "[Test] Please respond to the PR"
+          message: The PR has no response in the last 30s. Please respond to the PR to update status.  (This is a test email for sla-bot. Please ignore)
+
+- scheduleTask:
       name: "no-initial-response"
       description: "None initial response in 24 hours"
       branchWhitelist: ["master"]
@@ -9,6 +20,7 @@
           subject: "[Reminder] Please make a initial response to the PR"
           message: The PR has no initial response in the last 24h. Please respond to the PR to update status.
 
+
 - scheduleTask:
       name: "no-update-in-5d"
       description: "None update in PR in 5 days"
@@ -16,6 +28,6 @@
       action: sendEmailToAssignee
       args:
           ignoredLabels: ["WaitForAuthor", "DonNotMerge"]
-          limit: 10s
+          limit: 5d
           subject: "[Action] Please respond to the PR"
           message: The PR has no update in the last 5 days. Please respond to the PR to update status.

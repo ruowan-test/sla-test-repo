@@ -1,18 +1,13 @@
---- 
+---
 - group:
     name: default
     users:
-        - githubID: userA
-          email: userA@microsoft.com
-        - githubID : someone
-          email: someone@microsoft.com
-        - githubID: ruowan
-          email: ruowan@microsoft.com
-        - githubID: raych1
-          email: raychen@microsoft.com
+      - githubID: ruowan
+        email: ruowan@microsoft.com
+      - githubID: raych1
+        email: raychen@microsoft.com
+      - githubID: MyronFanQiu
+        email: fanqiu@microsoft.com
+      - githubID: yungezz
+        email: yungez@microsoft.com
       
-- group:
-    name: teamB
-    users: 
-        - githubID: xxx
-          email: xxx@microsoft.com

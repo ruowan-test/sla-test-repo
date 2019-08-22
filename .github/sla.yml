@@ -1,4 +1,4 @@
---- 
+---
 - scheduleTask:
       name: "test schedule task"
       description: "only for test"
@@ -19,6 +19,7 @@
           limit: 24h
           subject: "[Reminder] Please make a initial response to the PR"
           message: The PR has no initial response in the last 24h. Please respond to the PR to update status.
+
 
 - scheduleTask:
       name: "no-update-in-5d"

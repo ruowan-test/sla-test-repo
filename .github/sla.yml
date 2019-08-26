@@ -6,7 +6,7 @@
       action: sendEmailToAssignee
       args:
           ignoredLabels: ["WaitForAuthor", "DonNotMerge"]
-          limit: 30s
+          limit: 600s
           subject: "[Test] Please respond to the PR"
           message: "The PR has no response in the last 30s. Please respond to the PR to update status.  (This is a test email for sla-bot. Please ignore)"
 

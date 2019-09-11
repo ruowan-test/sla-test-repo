@@ -6,19 +6,20 @@
       action: sendEmailToAssignee
       args:
           ignoredLabels: ["WaitForAuthor", "DonNotMerge"]
-          limit: 600s
+          limit: 24h
           subject: "[Test] Please respond to the PR"
-          message: "The PR has no response in the last 30s. Please respond to the PR to update status.  (This is a test email for sla-bot. Please ignore)"
+          message: The PR has no response in the last 24h. Please respond to the PR to update status.  (This is a test email for sla-bot. Please ignore)
 
 - scheduleTask:
-      name: "no-initial-response"
-      description: "None initial response in 24 hours"
-      branchWhitelist: ["master"]
       action: sendEmailToAssignee
       args:
-          limit: 24h
-          subject: "[Reminder] Please make a initial response to the PR"
-          message: The PR has no initial response in the last 24h. Please respond to the PR to update status.
+          limit: 30s
+          message: "<h2>Action Required</h2> <p> Dear reviewer, <br> Please response to PR. The PR has no update in 2 days. <a href=${PR_URL}> PR link </a>. <br> <br>Belows are some useful information. <ul> <li>If no response from ARM review board, please send email to armapireview@microsoft.com.</li> <li>If need immediate ARM review, please get ARM review oncall contact point from ICM https://icm.ad.msft.net/imp/v3/oncall/current under Service “Azure Resource Manager” and Team “RP Manifest Approvers”</li> <li>If no response from Azure API review board, please send email to azureapirbcore@microsoft.com.</li> <li>If you have problem to fix CI task errors, please send email to Visual Studio China Swagger and Tool teamvscswagger@microsoft.com.</li> <li>If you want to opt out from Swagger reviewing for out of office period, please set vacation date at https://inframonitorweb1.azurewebsites.net/Home/MyView.</li> <li>Pls refer to <link> for more about Swagger review process.</li> </ul> Best wishes, <br> Email-bot </p>"
+          subject: "Action Required: Please respond to Azure/azure-rest-api-specs(or Azure/azure-rest-api-specs-pr) PR ${PR_URL}"
+      branchWhitelist:
+          - master
+      description: "None initial response in 24 hours"
+      name: no-initial-response
 
 
 - scheduleTask:

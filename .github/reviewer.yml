@@ -10,9 +10,3 @@
         email: fanqiu@microsoft.com
       - githubID: yungezz
         email: yungez@microsoft.com
-
-- group:
-    name: teamB
-    users:
-      - githubID: xxx
-        email: xxx@microsoft.com

@@ -33,7 +33,7 @@
         - ARMReviewInProgress
       matchedLabels:
         - WaitForARMFeedback
-      limit: 5d
+      limit: 5s
       subject: "ARM team notification email"
       message: "This is a notification email for the ARM team"
       to: ruowan@microsoft.com

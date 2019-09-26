@@ -26,7 +26,7 @@
     name: no-update-in-5d
 
 - scheduleTask:
-    action: sendEmailToARMTeam
+    action: sendEmail
     args:
       ignoredLabels:
         - ARMChangesRequested

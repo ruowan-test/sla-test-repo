@@ -2,6 +2,7 @@
 - scheduleTask:
     action: sendEmailToAssignee
     args:
+      labelFilterExpression: "!(WaitForARMFeedback||DoNotMerge||WaitingForAzureAPIBoard)"
       ignoredLabels:
         - WaitForARMFeedback
         - DoNotMerge
@@ -15,6 +16,7 @@
 - scheduleTask:
     action: sendEmailToAssignee
     args:
+      labelFilterExpression: "!(WaitForARMFeedback||DoNotMerge||WaitingForAzureAPIBoard)"
       ignoredLabels:
         - WaitForARMFeedback
         - DoNotMerge
@@ -28,6 +30,7 @@
 - scheduleTask:
     action: sendEmail
     args:
+      labelFilterExpression: "!ARMChangesRequested && !ARMReviewInProgress && WaitForARMFeedback"
       ignoredLabels:
         - ARMChangesRequested
         - ARMReviewInProgress
@@ -37,3 +40,5 @@
       subject: "ARM team notification email"
       message: "This is a notification email for the ARM team"
       to: ruowan@microsoft.com
+    description: "single email point"
+    name: "arm team"

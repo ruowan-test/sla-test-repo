@@ -30,4 +30,4 @@
     description: "single email point"
     name: "arm team"
     repoWhitelist:
-      - ruowan-test/sla-test-repo
+      - ruowan-test/sla-test-repos

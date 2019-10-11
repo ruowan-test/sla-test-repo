@@ -18,6 +18,8 @@
       subject: "Action Required: Please respond to PR ${PR_URL}"
     description: "None update in PR in 5 days"
     name: no-update-in-5d
+    repoWhitelist:
+      - ruowan-test/sla-test-repo
 
 - scheduleTask:
     action: sendEmail
@@ -30,4 +32,4 @@
     description: "single email point"
     name: "arm team"
     repoWhitelist:
-      - ruowan-test/sla-test-repos
+      - ruowan-test/sla-test-repo

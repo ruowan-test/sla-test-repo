@@ -21,14 +21,13 @@
     repoWhitelist:
       - ruowan-test/sla-test-repo-pr
 
-
 - scheduleTask:
     action: sendEmail
     args:
       labelFilterExpression: "!ARMChangesRequested && !ARMReviewInProgress && WaitForARMFeedback"
       limit: 5s
       subject: "ARM team notification email"
-      message: "This is a notification email for the ARM team"
+      message: "Dear ARM team, This is a notification email for the ARM team in testing. The PR ${PR_URL} is waiting on ARM team review. Please response to the PR. After response to the PR, please remove WaitForARMFeedback label and the bot won't send notification email about the PR to you again."
       to: ruowan@microsoft.com
     description: "single email point"
     name: "arm team"

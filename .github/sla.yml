@@ -27,7 +27,7 @@
       booleanFilterExpression: "!ARMChangesRequested && !ARMReviewInProgress && WaitForARMFeedback"
       limit: 5s
       subject: "Action Required: Please help to review PR ${PR_URL}"
-      message: "<p> Dear ARM review board, <br> <br>Please review PR {PR_URL}, the PR is waiting for ARM review over 3 days. Thanks.<br><hr /> <br>Quick info<ul><li>If you have feedback about the notification email, please contact us at vscswagger@microsoft.com.</li><li>After reviewing, please remove “WaitForARMFeedback” label from PR to correct state.</li></ul>Best regards,<br> Azure Management Experience</p>"
+      message: "<p> Dear ARM review board, <br> <br>Please review PR ${PR_URL}, the PR is waiting for ARM review over 3 days. Thanks.<br><hr /> <br>Quick info<ul><li>If you have feedback about the notification email, please contact us at vscswagger@microsoft.com.</li><li>After reviewing, please remove “WaitForARMFeedback” label from PR to correct state.</li></ul>Best regards,<br> Azure Management Experience</p>"
       to: ruowan@microsoft.com
     description: "single email point"
     name: "arm team"

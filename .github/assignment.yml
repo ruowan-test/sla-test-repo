@@ -1,0 +1,20 @@
+---
+condition:
+  name: branchWhitelistCheck
+  args:
+    repoWhitelist: ["azure-rest-api-specs"]
+    branchWhitelist: ["network-*", "master", "compute-release"]
+
+main:
+  - step:
+      name: assignByResourceProvider
+      args:
+        resourceProviderToReviewerGroupMapping:
+          network: network-group
+
+  - step:
+      name: assignByResourceType
+      args:
+        resourceTypeToReviewerGroupMapping:
+          data-plane: data-plane-group
+          resource-manager: resource-manager-group

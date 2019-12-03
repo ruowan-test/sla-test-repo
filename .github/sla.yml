@@ -44,6 +44,7 @@
       limit: 5s
       subject: "Action Required: Please response to issues ${URL}"
       message: "Please response to the issues ${URL}"
+      from: xxx@microsoft.com
       to: 
         - ruowan@microsoft.com
         - tih@microsoft.com

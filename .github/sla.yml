@@ -48,7 +48,7 @@
         - ruowan@microsoft.com
         - tih@microsoft.com
       cc:
-        - tih@microsoft.com
+        - qiaozha@microsoft.com
     description: "issue triage"
     name: "issue owner"
     scope: issue

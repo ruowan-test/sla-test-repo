@@ -55,3 +55,20 @@
     scope: issue
     repoWhitelist:
       - ruowan-test/sla-test-repo
+
+- scheduleTask:
+    action: sendEmailToAssignee
+    args:
+      booleanFilterExpression: "Mgnt"
+      limit: 5s
+      subject: "Action Required: Please response to issues ${URL}"
+      message: "Please response to the issues ${URL}. send email to assignee"
+      from: xxx@microsoft.com
+      cc:
+        - qiaozha@microsoft.com
+    description: "issue triage"
+    name: "issue owner"
+    scope: issue
+    repoWhitelist:
+      - ruowan-test/sla-test-repo
+      

@@ -72,7 +72,7 @@
     repoWhitelist:
       - ruowan-test/sla-test-repo
       
-  - scheduleTask:
+ - scheduleTask:
     action: sendEmailToAssignee
     scope: issue
     args:

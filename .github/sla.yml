@@ -1,6 +1,8 @@
 ---
 - scheduleTask:
     action: sendEmailToAssignee
+    trigger: 
+      - time
     args:
       booleanFilterExpression: "!(WaitForARMFeedback||DoNotMerge||WaitingForAzureAPIBoard)"
       limit: 100d
@@ -12,6 +14,9 @@
 
 - scheduleTask:
     action: sendEmailToAssignee
+    trigger: 
+      - time
+      - label
     args:
       booleanFilterExpression: "!(WaitForARMFeedback||DoNotMerge||WaitingForAzureAPIBoard||ARMSignedOff||AzureAPIBoardSignedOff)"
       limit: 100d
@@ -25,6 +30,8 @@
 
 - scheduleTask:
     action: sendEmail
+    trigger: 
+      - time
     args:
       booleanFilterExpression: "!ARMChangesRequested && !ARMReviewInProgress && WaitForARMFeedback"
       limit: 100s
@@ -39,6 +46,8 @@
 
 - scheduleTask:
     action: sendEmail
+    trigger: 
+      - time
     args:
       booleanFilterExpression: "Mgnt"
       limit: 5s
@@ -58,6 +67,7 @@
 
 - scheduleTask:
     action: sendEmailToAssignee
+    trigger: time
     args:
       booleanFilterExpression: "Mgnt"
       limit: 5s

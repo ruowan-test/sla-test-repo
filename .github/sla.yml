@@ -72,13 +72,16 @@
     repoWhitelist:
       - ruowan-test/sla-test-repo
       
+
 - scheduleTask:
-    action: sendEmailToAssignee
-    scope: issue
-    args:
-      booleanFilterExpression: "triage"
-      limit: 5s
-      message: "<p> Dear Swagger reviewer, <br> <br> Please response to the issue ${URL}. The issue isn't updated in 48 hours. <br> <hr /> <br> Quick info. <ul>  <li>If you have any question, please send email to Visual Studio China Swagger and Tool team vscswagger@microsoft.com.</li>  </ul> Best regards, <br> Azure Management Experience </p>"
-      subject: "Action Required: Please respond to issue ${URL}"
-      cc: Ankun.Ning@microsoft.com
-      
+    action: sendEmail
+    scope: pull_request
+    trigger: 
+      - label
+      - time
+    args: 
+      booleanFilterExpression: "LinterRuleCandidate"
+      limit: 10s
+      message: "Dear Swagger reviewer. Please review this LinterRuleCandidate PR"
+      subject: "Action Required: Please review the linterRuleCandidate PR"
+      to: ruowan@microsoft.com

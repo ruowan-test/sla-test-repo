@@ -1,20 +1,16 @@
 ---
-condition:
-  name: branchWhitelistCheck
-  args:
-    repoWhitelist: ["azure-rest-api-specs"]
-    branchWhitelist: ["network-*", "master", "compute-release"]
+- rule:
+    path: /specification/cdn
+    reviewers:
+      - ruowan
+      - raych1
 
-main:
-  - step:
-      name: assignByResourceProvider
-      args:
-        resourceProviderToReviewerGroupMapping:
-          network: network-group
+- rule: 
+    path: /specification/network
+    reviewers:
+      - ruowan
 
-  - step:
-      name: assignByResourceType
-      args:
-        resourceTypeToReviewerGroupMapping:
-          data-plane: data-plane-group
-          resource-manager: resource-manager-group
+- rule: 
+    path: /specification/**/date-plane
+    reviewers:
+    - Dreamgoing

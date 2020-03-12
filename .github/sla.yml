@@ -86,12 +86,13 @@
 - scheduleTask:
     action: sendEmail
     scope: pull_request
+    name: "linter rule candidate"
     trigger: 
       - label
       - time
     args: 
       booleanFilterExpression: "LinterRuleCandidate"
       limit: 10s
-      message: "Dear Swagger reviewer. Please review this LinterRuleCandidate PR"
+      message: "Dear Swagger reviewer. Please review this LinterRuleCandidate PR ${URL}"
       subject: "Action Required: Please review the linterRuleCandidate PR"
       to: ruowan@microsoft.com

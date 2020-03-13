@@ -1,16 +1,21 @@
 ---
 - rule:
-    path: /specification/cdn
+    path: '/specification/cdn'
     reviewers:
       - ruowan
       - raych1
 
 - rule: 
-    path: /specification/network
+    path: '/specification/network'
     reviewers:
       - ruowan
 
 - rule: 
-    path: /specification/**/date-plane
+    path: '/specification/**/date-plane'
     reviewers:
     - Dreamgoing
+
+- rule:
+    path: '*'
+    reviewers: 
+    - ruowan

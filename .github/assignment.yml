@@ -16,6 +16,6 @@
     - Dreamgoing
 
 - rule:
-    path: '*'
+    path: '**'
     reviewers: 
     - ruowan

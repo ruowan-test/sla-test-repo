@@ -1,21 +1,27 @@
 ---
 - rule:
-    path: '/specification/cdn'
+    path: "documentation/**"
     reviewers:
       - ruowan
       - raych1
 
-- rule: 
-    path: '/specification/network'
+- rule:
+    path: "/specification/**/Microsoft.Network/**"
     reviewers:
       - ruowan
 
-- rule: 
-    path: '/specification/**/date-plane'
+- rule:
+    path: "/specification/**/date-plane/**"
     reviewers:
-    - Dreamgoing
+      - Dreamgoing
 
 - rule:
-    path: '**'
-    reviewers: 
-    - ruowan
+    path: "/specification/**/resource-manager/**"
+    reviewers:
+      - NullMDR
+      - ruowan
+
+- rule:
+    path: "**"
+    reviewers:
+      - ruowan

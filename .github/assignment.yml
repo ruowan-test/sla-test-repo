@@ -9,6 +9,8 @@
     path: "specification/**/Microsoft.Network/**"
     reviewers:
       - ruowan
+      - NullMDR
+      - Dreamgoing
 
 - rule:
     path: "specification/**/date-plane/**"

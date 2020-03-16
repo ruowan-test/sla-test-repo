@@ -6,17 +6,17 @@
       - raych1
 
 - rule:
-    path: "/specification/**/Microsoft.Network/**"
+    path: "specification/**/Microsoft.Network/**"
     reviewers:
       - ruowan
 
 - rule:
-    path: "/specification/**/date-plane/**"
+    path: "specification/**/date-plane/**"
     reviewers:
       - Dreamgoing
 
 - rule:
-    path: "/specification/**/resource-manager/**"
+    path: "specification/**/resource-manager/**"
     reviewers:
       - NullMDR
       - ruowan

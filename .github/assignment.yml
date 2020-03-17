@@ -1,29 +1,37 @@
 ---
 - rule:
-    path: "documentation/**"
+    paths: "documentation/**"
     reviewers:
       - ruowan
       - raych1
 
 - rule:
-    path: "specification/**/Microsoft.Network/**"
+    paths: "specification/**/Microsoft.Network/**"
     reviewers:
       - ruowan
       - NullMDR
       - Dreamgoing
 
 - rule:
-    path: "specification/**/date-plane/**"
+    paths: "specification/**/date-plane/**"
     reviewers:
       - Dreamgoing
 
 - rule:
-    path: "specification/**/resource-manager/**"
+    paths: 
+      - "specification/**/resource-manager/**"
     reviewers:
       - NullMDR
       - ruowan
 
 - rule:
-    path: "**"
+    paths: 
+     - "**/package.json"
+     - "package.json"
+    reviewers:
+      - ruowan
+
+- rule:
+    paths: "**"
     reviewers:
       - ruowan

@@ -13,6 +13,14 @@
       - Dreamgoing
 
 - rule:
+    paths: 
+      - "specification/@(containerservice|databricks|containerregistry|compute)/**"
+      - "specification/@(docker)/**"
+    reviewers:
+      - ruowan
+      - Dreamgoing
+
+- rule:
     paths: "specification/**/date-plane/**"
     reviewers:
       - Dreamgoing

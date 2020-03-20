@@ -96,3 +96,5 @@
       message: "Dear Swagger reviewer. Please review this LinterRuleCandidate PR ${URL}"
       subject: "Action Required: Please review the linterRuleCandidate PR"
       to: ruowan@microsoft.com
+      cc: 
+        - ${Author}

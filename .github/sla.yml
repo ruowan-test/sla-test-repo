@@ -97,4 +97,4 @@
       subject: "Action Required: Please review the linterRuleCandidate PR"
       to: ruowan@microsoft.com
       cc: 
-        - ${Author}
+        - ${AUTHOR}

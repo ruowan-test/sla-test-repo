@@ -89,12 +89,11 @@
     name: "linter rule candidate"
     trigger: 
       - label
-      - time
     args: 
-      booleanFilterExpression: "LinterRuleCandidate"
+      booleanFilterExpression: "ValidationToolBug"
       limit: 10s
-      message: "Dear Swagger reviewer. Please review this LinterRuleCandidate PR ${URL}"
-      subject: "Action Required: Please review the linterRuleCandidate PR"
+      message: "Dear Swagger and tools team. Please review this validation tools bug PR ${URL}"
+      subject: "Action Required: Please help to fix the validation tools bug PR"
       to: ${ASSIGNEE}
       cc: 
         - ${AUTHOR}

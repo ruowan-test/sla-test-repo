@@ -16,7 +16,7 @@
 - scheduleTask:
     action: sendEmail
     scope: pull_request
-    name: "send email to swagger reviewer"
+    name: "send email to ARM review board"
     trigger:
       - label
     args:
@@ -42,4 +42,18 @@
       to: vscswagger@microsoft.com
       cc:
         - ${AUTHOR}
+        - ${ASSIGNEE}
+
+- scheduleTask:
+    action: sendEmail
+    scope: pull_request
+    name: "send email to PR author"
+    trigger:
+      - label
+    args:
+      booleanFilterExpression: (Reviewed-ChangesRequired||ARMChangeRequest)
+      message: '<p>Dear PR author,</p><p>The PR Reviewer has commented on your PR ${URL} , putting on the label "Reviewed-ChangesRequired" or "ARMChangeRequest". Please check out the comment by clicking the PR link attached previously, and update your commits accordingly.</p><p>Please ensure to remove "Reviewed-ChangesRequired" or "ARMChangeRequest" label, after you complete updates and comment back. If you need ARM board or swagger reviewer revisit your PR, please label the PR with 'WaitForARMRevisit' and 'WaitForReviewRevisit' respectively.</p><p>Quick info.</p><ul><li>How to fix CI error:&nbsp;<a href="https://github.com/Azure/azure-rest-api-specs/blob/master/documentation/ci-fix.md">https://github.com/Azure/azure-rest-api-specs/blob/master/documentation/ci-fix.md</a></li></ul><p><em>DO NOT REPLY: This is an automated email. If you have any questions, please send an email to the Swagger and Tools Team (vscswagger@microsoft.com).</em></p><p>Best regards,</p><p>Swagger and Tools Team, Azure Management Experience</p>'
+      subject: "[TEST] Action Required: Please update your PR ${URL}"
+      to: ${AUTHOR}
+      cc:
         - ${ASSIGNEE}

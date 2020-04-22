@@ -22,9 +22,25 @@
     args:
       booleanFilterExpression: "(WaitForARMFeedback||WaitForARMRevisit)&&!NotReadyForReview"
       limit: 10s
-      message: '<p>Dear ARM review board,</p><p>Please review the PR ${URL}. You receive the email because the PR is labelled with either "WaitForARMFeedback" or "WaitForARMRevisit".</p><p>Quick info.</p><ul><li>After review, please remove the label &ldquo;WaitForARMFeedback&rdquo; or "WaitForARMRevisit" from the PR, so that there will not be further notification email.</li></ul><p><em>DO NOT REPLY: This is an automated email. If you have any questions, please send an email to the Swagger and Tools Team (vscswagger@microsoft.com).</em></p><p>Best regards,</p><p>Swagger and Tools Team, Azure Management Experience</p>'
+      message: '<p>Dear ARM review board,</p><p>Please review the PR ${URL}. You receive the email because the PR is labeled with either "WaitForARMFeedback" or "WaitForARMRevisit".</p><p>Quick info.</p><ul><li>After review, please remove the label &ldquo;WaitForARMFeedback&rdquo; or "WaitForARMRevisit" from the PR, so that there will not be further notification email.</li></ul><p><em>DO NOT REPLY: This is an automated email. If you have any questions, please send an email to the Swagger and Tools Team (vscswagger@microsoft.com).</em></p><p>Best regards,</p><p>Swagger and Tools Team, Azure Management Experience</p>'
       subject: "Action Required: Please respond to the PR ${URL}"
       to: ruowantest@microsoft.com
+      cc:
+        - ${AUTHOR}
+        - ${ASSIGNEE}
+
+- scheduleTask:
+    action: sendEmail
+    scope: pull_request
+    name: "send email to swagger and tools team"
+    trigger:
+      - label
+    args:
+      booleanFilterExpression: "LintRuleCandidate||ValidationToolBug"
+      limit: 10s
+      message: '<p>Dear Swagger and Tools Team,</p><p>Please check the PR ${URL}. You receive the email because the PR is labeled "LintRuleCandidate" or "ValidationToolBug"</p><p>Quick info.</p><ul><li>After review, please ensure to replace the label &ldquo;LintRuleCandidate&rdquo; or "ValidationToolBug" with "LintRuleCandidateCollected" or "ValidationToolBugCollected", so that there will not be further notification email.</li></ul><p><em>DO NOT REPLY: This is an automated email. If you have any questions, please send an email to the Swagger and Tools Team (vscswagger@microsoft.com).</em></p><p>Best regards,</p><p>Swagger and Tools Team, Azure Management Experience</p>'
+      subject: "Action Required: Please review the PR ${URL}"
+      to: vscswagger@microsoft.com
       cc:
         - ${AUTHOR}
         - ${ASSIGNEE}

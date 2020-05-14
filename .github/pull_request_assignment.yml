@@ -38,8 +38,10 @@
      - "package.json"
     reviewers:
       - ruowan
+      - NullMDR
 
 - rule:
     paths: "**"
     reviewers:
       - ruowan
+      - NullMDR

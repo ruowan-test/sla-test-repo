@@ -8,3 +8,9 @@
     assignees:
       - ruowan
       - NullMDR
+
+- rule:
+    booleanFilterExpression: "triage"
+    assignees:
+      - ruowan
+      - NullMDR

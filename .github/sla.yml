@@ -86,3 +86,22 @@
       cc:
         - cplatsdkdev@microsoft.com
         - ruowan@microsoft.com
+  
+- scheduleTask:	
+    action: sendEmail	
+    scope: pull_request	
+    name: "send email given path change AND Label"	
+    trigger:	
+      - path	
+      - label
+    args:
+      booleanFilterExpression: ARMSignedOff
+      message: "<p>This is another test message specifying that there is your PR has been merged.</p>"	
+      targetPaths:	
+        - "specification/pathtriggertest/**"	
+      subject: "ARMSignedOff ${URL}"	
+      to: ${AUTHOR}
+      cc:
+        - cplatsdkdev@microsoft.com
+        - ruowan@microsoft.com
+  

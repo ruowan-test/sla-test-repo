@@ -71,5 +71,18 @@
       cc:
         - ${ASSIGNEE}
 
-
-
+- scheduleTask:	
+    action: sendEmail	
+    scope: pull_request	
+    name: "send email given path change"	
+    trigger:	
+      - path	
+    args:	
+      message: "<p>This is a test message specifying that there is a new PR and the following the compute folder path is concerned.</p>"	
+      targetPaths:	
+        - "specification/pathtriggertest/**"	
+      subject: "Action Required: Please respond to issue ${URL}"	
+      to: ${AUTHOR}
+      cc:
+        - cplatsdkdev@microsoft.com
+        - ngdiarra@microsoft.com

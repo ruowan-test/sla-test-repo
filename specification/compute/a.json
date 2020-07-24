@@ -1,6 +1,7 @@
 [
     {
         "name": "swagger-repo-test-specs",
-        "api": "best-api"
+        "api": "best-api",
+        "test": "test"
     }
 ]

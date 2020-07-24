@@ -83,9 +83,6 @@
         - "specification/compute/**"	
       subject: "[Action Required] CPlat Swagger Pull Request opened: Next steps"	
       to: ${AUTHOR}
-      cc:
-        - cplatsdkdev@microsoft.com
-        - ruowan@microsoft.com
   
 - scheduleTask:	
     action: sendEmail	

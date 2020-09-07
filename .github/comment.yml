@@ -1,0 +1,24 @@
+---
+- rule:
+  type: checkbox
+  keywords:
+    - "Removing API(s)"
+    - "Updating API in stable version"
+  onCheckedLabels:
+    - breakingChange
+  onCheckedComments: "Hi, ${PRAuthor} your PR contains breaking change. Pls follow..."
+
+- rule:
+  type: checkbox
+  keywords:
+    - "waitForARMFeedback"
+  onCheckedLabel: WaitForARMFeedback
+# - rule:
+#   type: approved
+#   onApprovedLabel: approvedOkToMerge
+#   onApprovedComments: "Hi, ${PRAuthor} your PR has been approved. what's need to do next..."
+
+# - rule:
+#   type: label
+#   labelName: approve
+#   onLabelComments: "hi, the PR labelled with xxx"

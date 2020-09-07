@@ -1,18 +1,18 @@
 ---
 - rule:
-  type: checkbox
-  keywords:
-    - "Removing API(s)"
-    - "Updating API in stable version"
-  onCheckedLabels:
-    - breakingChange
-  onCheckedComments: "Hi, ${PRAuthor} your PR contains breaking change. Pls follow..."
+    type: checkbox
+    keywords:
+      - "Removing API(s)"
+      - "Updating API in stable version"
+    onCheckedLabels:
+      - breakingChange
+    onCheckedComments: "Hi, ${PRAuthor} your PR contains breaking change. Pls follow..."
 
 - rule:
-  type: checkbox
-  keywords:
-    - "waitForARMFeedback"
-  onCheckedLabel: WaitForARMFeedback
+    type: checkbox
+    keywords:
+      - "waitForARMFeedback"
+    onCheckedLabel: WaitForARMFeedback
 # - rule:
 #   type: approved
 #   onApprovedLabel: approvedOkToMerge

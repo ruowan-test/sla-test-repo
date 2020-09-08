@@ -6,7 +6,7 @@
       - "Updating API in stable version"
     onCheckedLabels:
       - breakingChange
-    onCheckedComments: "Hi, @${PRAuthor} your PR contains breaking change. Pls follow..."
+    onCheckedComments: "Hi, @${PRAuthor} your PR contains breaking change. Pls follow [breaking change policy](https://dev.azure.com/msazure/AzureWiki/_wiki/wikis/AzureWiki.wiki/43942/Policy-for-Breaking-Changes). "
 
 - rule:
     type: checkbox
@@ -15,7 +15,15 @@
     booleanFilterExpression: "!(ARMSignedOff||ARMChangesRequested||Approved-OkToMerge||WaitForARMRevisit)"
     onCheckedLabels:
       - WaitForARMFeedback
-    onCheckedComments: "Hi, @${PRAuthor} your PR was labelled with WaitForARMFeedback. @${PRAssignee} needs your attention."
+    onCheckedComments: "Hi, @${PRAuthor} your PR was labelled with WaitForARMFeedback. cc @${PRAssignee}"
+
+- rule:
+    type: checkbox
+    keywords:
+      - "I have reviewed the [documentation](https://aka.ms/ameonboard) for the workflow."
+    onCheckedLabels:
+      - ReadyForReview
+    onCheckedComments: "Hi, @${PRAuthor} Thanks for your PR."
 # - rule:
 #   type: approved
 #   onApprovedLabel: approvedOkToMerge

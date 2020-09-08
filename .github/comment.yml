@@ -4,6 +4,7 @@
     keywords:
       - "Removing API(s)"
       - "Updating API in stable version"
+    booleanFilterExpression: "!(ARMSignedOff||ARMChangesRequested||Approved-OkToMerge||WaitForARMRevisit)"
     onCheckedLabels:
       - breakingChange
     onCheckedComments: "Hi, ${PRAuthor} your PR contains breaking change. Pls follow..."

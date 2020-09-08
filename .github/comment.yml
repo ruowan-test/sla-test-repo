@@ -23,7 +23,7 @@
       - "I have reviewed the [documentation](https://aka.ms/ameonboard) for the workflow."
     onCheckedLabels:
       - ReadyForReview
-    onCheckedComments: "Hi, @${PRAuthor} Thanks for your PR."
+    onCheckedComments: "Hi, @${PRAuthor} Thanks for your PR. I am workflow bot for review process. Here are some small tips. </br> <li> Please check the checkbox in first PR comments if applicable. </li> <li>Please fix CI error before PR merge. </li> <li> PR assignee is responsible for your current PR reviewing and merging. </li>"
 # - rule:
 #   type: approved
 #   onApprovedLabel: approvedOkToMerge

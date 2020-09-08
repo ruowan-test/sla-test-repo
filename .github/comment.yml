@@ -15,7 +15,7 @@
     booleanFilterExpression: "!(ARMSignedOff||ARMChangesRequested||Approved-OkToMerge||WaitForARMRevisit)"
     onCheckedLabels:
       - WaitForARMFeedback
-    onApprovedComments: "Hi, ${PRAuthor} your PR was labelled with WaitForARMFeedback. ${PRAssignee} needs your attention."
+    onCheckedComments: "Hi, ${PRAuthor} your PR was labelled with WaitForARMFeedback. ${PRAssignee} needs your attention."
 # - rule:
 #   type: approved
 #   onApprovedLabel: approvedOkToMerge

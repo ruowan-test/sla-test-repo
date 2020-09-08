@@ -12,7 +12,8 @@
     type: checkbox
     keywords:
       - "waitForARMFeedback"
-    onCheckedLabel: WaitForARMFeedback
+    onCheckedLabels:
+      - WaitForARMFeedback
 # - rule:
 #   type: approved
 #   onApprovedLabel: approvedOkToMerge

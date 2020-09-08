@@ -11,11 +11,11 @@
 - rule:
     type: checkbox
     keywords:
-      - "waitForARMFeedback"
+      - "WaitForARMFeedback"
     booleanFilterExpression: "!(ARMSignedOff||ARMChangesRequested||Approved-OkToMerge||WaitForARMRevisit)"
     onCheckedLabels:
       - WaitForARMFeedback
-    onApprovedComments: "Hi, ${PRAuthor} your PR was labelled with waitForARMFeedback. ${PRAssignee} needs your attention."
+    onApprovedComments: "Hi, ${PRAuthor} your PR was labelled with WaitForARMFeedback. ${PRAssignee} needs your attention."
 # - rule:
 #   type: approved
 #   onApprovedLabel: approvedOkToMerge

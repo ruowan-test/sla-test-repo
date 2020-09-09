@@ -27,7 +27,7 @@
 
 - rule:
     type: label
-    label: BreakingChange
+    label: breakingChange
     onLabeledComments: "Hi, your PR meet breaking change."
 # - rule:
 #   type: approved

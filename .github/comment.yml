@@ -6,7 +6,6 @@
       - "Updating API in stable version"
     onCheckedLabels:
       - breakingChange
-    onCheckedComments: "Hi, @${PRAuthor} your PR contains breaking change. Pls follow [breaking change policy](https://dev.azure.com/msazure/AzureWiki/_wiki/wikis/AzureWiki.wiki/43942/Policy-for-Breaking-Changes). "
 
 - rule:
     type: checkbox
@@ -28,7 +27,12 @@
 - rule:
     type: label
     label: breakingChange
-    onLabeledComments: "Hi, your PR meet breaking change."
+    onLabeledComments: "Hi, @${PRAuthor} your PR contains breaking change. Pls follow [breaking change policy](https://dev.azure.com/msazure/AzureWiki/_wiki/wikis/AzureWiki.wiki/43942/Policy-for-Breaking-Changes). "
+
+- rule:
+    type: label
+    label: ApprovedOkToMerge
+    onLabeledComments: "Hi, @${PRAuthor} congratulations. Your PR was approved. </br> <li> If your PR are ready to merge, pls contact PR assignee to merge </li>. <li>If your PR in private repo, when your service ready to go public, pls create PR in public repo and reference this one. </li>"
 # - rule:
 #   type: approved
 #   onApprovedLabel: approvedOkToMerge

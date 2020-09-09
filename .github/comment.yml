@@ -32,7 +32,7 @@
 - rule:
     type: label
     label: ApprovedOkToMerge
-    onLabeledComments: "Hi, @${PRAuthor} congratulations. Your PR was approved. </br> <li> If your PR are ready to merge, pls contact PR assignee to merge </li>. <li>If your PR in private repo, when your service ready to go public, pls create PR in public repo and reference this one. </li>"
+    onLabeledComments: "Hi, @${PRAuthor} congratulations. Your PR was approved. </br> <li> If your PR are ready to merge, pls contact PR assignee @${PRAssignee} to merge. </li><li>If your PR in private repo, when your service ready to go public, pls create PR in public repo and reference this one. </li>"
 # - rule:
 #   type: approved
 #   onApprovedLabel: approvedOkToMerge

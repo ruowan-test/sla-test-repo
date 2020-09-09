@@ -24,6 +24,11 @@
     onCheckedLabels:
       - ReadyForReview
     onCheckedComments: "Hi, @${PRAuthor} Thanks for your PR. I am workflow bot for review process. Here are some small tips. </br> <li> Please check the checkbox in first PR comments if applicable. </li> <li>If CI failed, Please fix CI error before PR merge. [How to fix?](https://aka.ms/ci-fix) </li> <li> PR assignee is responsible for your current PR reviewing and merging. </li> </br> Any feedback about review process or workflow bot, pls contact swagger and tools team. vsswagger@microsoft.com"
+
+- rule:
+    type: label
+    label: BreakingChange
+    onLabeledComments: "Hi, your PR meet breaking change."
 # - rule:
 #   type: approved
 #   onApprovedLabel: approvedOkToMerge

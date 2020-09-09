@@ -1,16 +1,19 @@
 ---
 - rule:
-    booleanFilterExpression: "Java"
+    label: Java
+    booleanFilterExpression: "Java&&Mgnt"
     assignees:
       - ruowan
 - rule:
-    booleanFilterExpression: "Python"
+    label: Python
+    booleanFilterExpression: "Python&&Mgnt"
     assignees:
       - ruowan
       - NullMDR
 
 - rule:
     booleanFilterExpression: "triage"
+    label: Triage
     assignees:
       - ruowan
       - Dreamgoing

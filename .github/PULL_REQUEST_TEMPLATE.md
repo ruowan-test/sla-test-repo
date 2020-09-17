@@ -25,4 +25,4 @@ If there are following updates in the PR, ensure to request an approval from API
 - [ ] Updating API in stable version with Breaking Change Validation errors
 - [ ] Updating API(s) in preview over 1 year
 
-Please follow the link to find more details on [PR review process](https://aka.ms/SwaggerPRReview).
+Please follow the link to find more details on  [PR review process](https://aka.ms/SwaggerPRReview).

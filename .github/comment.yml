@@ -14,7 +14,7 @@
     booleanFilterExpression: "!(ARMSignedOff||ARMChangesRequested||Approved-OkToMerge||WaitForARMRevisit)"
     onCheckedLabels:
       - WaitForARMFeedback
-    onCheckedComments: "Hi, @${PRAuthor} your PR are labelled with <b>WaitForARMFeedback</b>. A notification email will be sent out shortly afterwards to notify ARM review board(armapireview@microsoft.com). cc @${PRAssignee} "
+    onCheckedComments: "Hi, @${PRAuthor} your PR are labelled with <b> WaitForARMFeedback</b>. A notification email will be sent out shortly afterwards to notify ARM review board(armapireview@microsoft.com). cc @${PRAssignee} "
 
 - rule:
     type: checkbox

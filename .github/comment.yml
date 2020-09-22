@@ -14,7 +14,7 @@
     booleanFilterExpression: "!(ARMSignedOff||ARMChangesRequested||Approved-OkToMerge||WaitForARMRevisit)"
     onCheckedLabels:
       - WaitForARMFeedback
-    onCheckedComments: "Hi, @{PRAuthor} your PR are labelled with WaitForARMFeedback. A notification email will be sent out shortly afterwards to notify ARM review board(armapireview@microsoft.com). cc ${PRAssignee} "
+    onCheckedComments: "Hi, @${PRAuthor} your PR are labelled with WaitForARMFeedback. A notification email will be sent out shortly afterwards to notify ARM review board(armapireview@microsoft.com). cc ${PRAssignee} "
 
 - rule:
     type: checkbox
@@ -25,7 +25,7 @@
 - rule:
     type: label
     label: breakingChange
-    onLabeledComments: "Hi ${PRAuthor}, one or multiple breaking change(s) is detected in your PR. Pls follow [breaking change policy](https://dev.azure.com/msazure/AzureWiki/_wiki/wikis/AzureWiki.wiki/43942/Policy-for-Breaking-Changes) to request breaking change review and approval before proceeding swagger PR review. "
+    onLabeledComments: "Hi @${PRAuthor}, one or multiple breaking change(s) is detected in your PR. Pls follow [breaking change policy](https://dev.azure.com/msazure/AzureWiki/_wiki/wikis/AzureWiki.wiki/43942/Policy-for-Breaking-Changes) to request breaking change review and approval before proceeding swagger PR review. "
 
 - rule:
     type: label

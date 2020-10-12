@@ -29,7 +29,7 @@
 
 - rule:
     type: label
-    label: lintDiff
+    label: lintDiffFailure
     onLabeledComments: "Hi @${PRAuthor}, pls fix lint error. If you need support, pls contact @ruowan (ruowan@microsoft.com)" 
 
 - rule:

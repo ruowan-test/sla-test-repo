@@ -30,7 +30,7 @@
 - rule:
     type: label
     label: lintDiffFailure
-    onLabeledComments: "Hi @${PRAuthor}, pls fix lint error. If you need support, pls contact @ruowan (ruowan@microsoft.com)" 
+    onLabeledComments: "Hi @${PRAuthor}, pls fix lint error [how to fix](https://github.com/Azure/azure-rest-api-specs/blob/master/documentation/openapi-authoring-automated-guidelines.md).  If you need support, pls contact @ruowan (ruowan@microsoft.com)" 
 
 - rule:
     type: label

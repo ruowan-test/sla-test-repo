@@ -1,1 +1,2 @@
-{"hello": "this is data-plane json"}
+{"hello": "this is data-plane json",
+"ok": "hello"}

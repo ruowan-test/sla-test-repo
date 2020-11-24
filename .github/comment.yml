@@ -57,7 +57,7 @@
     variables:
       openapiHub: https://openapihub.test.azure-devex-tools.com/
       to: test-repo-billy/azure-rest-api-specs/master
-    onLabeledComments: "Hi @${PRAuthor},Your PR is approved. ${openapiHub}/tools/publishpullrequest?pr={owner}/${repo}/${PRNumber}&to=${to}"
+    onLabeledComments: "Hi @${PRAuthor},Your PR is approved. ${openapiHub}/tools/publishpullrequest?pr=${owner}/${repo}/${PRNumber}&to=${to}"
 
 - rule:
     type: label

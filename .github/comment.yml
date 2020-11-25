@@ -37,29 +37,14 @@
 - rule:
     type: label
     label: ApprovedOkToMerge
-    variables:
-      openapiHub: https://openapihub.test.azure-devex-tools.com/
-    onLabeledComments: "Hi @${PRAuthor},Your PR is approved. Congratulations. </br> <li> If your PR is in public repo (azure-rest-api-specs),  PR assignee will merge all updates in the PR shortly afterwards; or pause the PR merge, you need to put on a label <b>DoNotMerge</b> to PR as soon as possible. </li><li>If your PR is in private repo (azure-rest-api-specs-pr),  there won’t be PR merge.  Please refer to this [wiki](https://dev.azure.com/azure-sdk/internal/_wiki/wikis/internal.wiki/205/RP-Scenarios-to-Contribute-to-Swagger?anchor=**public-repository-vs.-private-repository**) for further guidance on how to proceed. </li>"
-
-- rule:
-    type: label
-    label: OpenapiHub-diff
-    variables:
-      openapiHub: https://openapihub.test.azure-devex-tools.com/
-    onLabeledComments: "Hi @${PRAuthor},Your PR is approved. ${openapiHub}diff?pr=${owner}/${repo}/${PRNumber}"
-
-- rule:
-    type: label
-    label: OpenapiHub-movePR
     repoAllowList:
       - Azure/azure-rest-api-specs-pr
       - test-repo-billy/azure-rest-api-specs-pr 
       - ruowan-test/sla-test-repo
-
     variables:
       openapiHub: https://openapihub.test.azure-devex-tools.com/
       to: test-repo-billy/azure-rest-api-specs/master
-    onLabeledComments: "Hi @${PRAuthor},Your PR is approved. ${openapiHub}/tools/publishpullrequest?pr=${owner}/${repo}/${PRNumber}&to=${to}"
+    onLabeledComments: "Hi @${PRAuthor},Your PR is approved. Congratulations. </br> <li> If your PR is in public repo (azure-rest-api-specs),  PR assignee will merge all updates in the PR shortly afterwards; or pause the PR merge, you need to put on a label <b>DoNotMerge</b> to PR as soon as possible. </li><li>If your PR is in private repo (azure-rest-api-specs-pr),  there won’t be PR merge. If you want to move the PR to public, pls use [OpenAPIHub movePR](${openapiHub}/tools/publishpullrequest?pr=${owner}/${repo}/${PRNumber}&to=${to}) Please refer to this [wiki](https://dev.azure.com/azure-sdk/internal/_wiki/wikis/internal.wiki/205/RP-Scenarios-to-Contribute-to-Swagger?anchor=**public-repository-vs.-private-repository**) for further guidance on how to proceed. </li>"
 
 - rule:
     type: label

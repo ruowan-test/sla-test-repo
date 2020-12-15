@@ -41,7 +41,7 @@
 - rule:
     type: label
     label: CI-Failed
-    onLabeledComments: "Hi @${PRAuthor}, <table><tr><th>Task</th><th>How to fix</th><th>Support</th></tr><tr><td>Avocado</td><td>[readme](https://github.com/Azure/avocado)</td><td>ruowan</td></tr></table>" 
+    onLabeledComments: "Hi @${PRAuthor}, <table><tr><th>Task</th><th>How to fix</th><th>Priority</th><th>Support</th></tr><tr><td>Avocado</td><td>[readme](https://github.com/Azure/avocado)</td><td>High</td><td>ruowan@microsoft.com</td></tr></table>" 
 
 - rule:
     type: label

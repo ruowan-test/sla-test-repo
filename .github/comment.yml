@@ -41,11 +41,7 @@
 - rule:
     type: label
     label: CI-Failed
-    onLabeledComments: "Hi @${PRAuthor}, | name  | how to fix  | contact person  |
-                                         | ----- | ---- | ---- |
-                                         |  Avocado     | readme     | ruowan     |
-                                         |       |      |      |
-                                         |       |      |      |" 
+    onLabeledComments: "Hi @${PRAuthor}, <table><tr><th>Name</th><th>How to fix</th><th>Support</th></tr><tr><td>Avocado</td><td>readme</td><td>ruowan</td></tr></table>" 
 
 - rule:
     type: label

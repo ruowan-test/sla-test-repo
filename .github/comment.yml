@@ -40,8 +40,12 @@
 
 - rule:
     type: label
-    label: lintDiffFailure
-    onLabeledComments: "Hi @${PRAuthor}, pls fix LintDiff error [how to fix](https://github.com/Azure/azure-rest-api-specs/blob/master/documentation/openapi-authoring-automated-guidelines.md).  If you need support, pls contact @ruowan (ruowan@microsoft.com)" 
+    label: CI-Failed
+    onLabeledComments: "Hi @${PRAuthor}, | name  | how to fix  | contact person  |
+                                         | ----- | ---- | ---- |
+                                         |  Avocado     | readme     | ruowan     |
+                                         |       |      |      |
+                                         |       |      |      |" 
 
 - rule:
     type: label
